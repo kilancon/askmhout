@@ -9,7 +9,7 @@ interface StoredResponse {
     date: string | null;
     time: string;
     food: string[];
-    movie: string;
+    activity: string;
     excitement: number;
   };
 }
@@ -65,8 +65,8 @@ export default function AdminPage() {
             <div className="space-y-2 text-left">
               <p>Date: {response.data.date ? new Date(response.data.date).toLocaleDateString() : 'Not selected'}</p>
               <p>Time: {response.data.time || 'Not selected'}</p>
-              <p>Food Choices: {response.data.food.join(', ') || 'Not selected'}</p>
-              <p>Activity: {response.data.movie || 'Not selected'}</p>
+              <p>Food Choices: {response.data.food|| 'Not selected'}</p>
+              <p>Activity: {response.data.activity || 'Not selected'}</p>
               <p>Excitement Level: {response.data.excitement}/100</p>
             </div>
           </div>
