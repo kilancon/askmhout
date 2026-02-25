@@ -109,7 +109,7 @@ export default function EnchantingDateProposalApp() {
   const steps = [
     
     <motion.div key="step0" className="text-center" {...fadeInUp}>
-      <h1 className="text-4xl sm:text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-600 to-rose-500">
+      <h1 className="text-2xl sm:text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-600 to-rose-500">
         Mai Huyền đi date với anh nhé
       </h1>
       <motion.img
@@ -173,7 +173,7 @@ export default function EnchantingDateProposalApp() {
     
     <motion.div key="step1" className="text-center" {...fadeInUp}>
       <StepCard stepNumber={1} totalSteps={5}>
-      <h2 className="text-3xl sm:text-4xl font-playfair font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-rose-500 to-pink-600">
+      <h2 className="text-2xl sm:text-4xl font-playfair font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-rose-500 to-pink-600">
         Chọn thời gian cho buổi hẹn
       </h2>
       <motion.img
@@ -182,21 +182,22 @@ export default function EnchantingDateProposalApp() {
         transition={{ duration: 0.5 }}
         src="https://media.tenor.com/WiQQRwR2QFAAAAAi/cute-panda.gif"
         alt="Excited bear gif"
-        className="w-48 sm:w-56 mx-auto mb-4 rounded-2xl shadow-xl shadow-pink-300/30"
+        className="w-48 sm:w-56 mx-auto mb-2 rounded-2xl shadow-xl shadow-pink-300/30"
         // className="w-full max-w-md mx-auto mb-6 rounded-2xl shadow-2xl shadow-pink-300/30"
       />
       <p className="text-sm text-pink-500 mb-3">
         Khánh Hưng đề xuất ngày <b>27/02</b>, nhưng nếu Mai Huyền bận thì chọn ngày khác cũng được nha.
       </p>
-      <div className="mb-6 p-4 bg-white rounded-lg shadow-lg">
-        <Calendar
-          mode="single"
-          fromMonth={startOfMonth(today)}
-          // toMonth={endOfMonth(today)}
-          selected={answers.date || undefined}
-          onSelect={(date) => setAnswers({ ...answers, date: date || null })}
-          className="mx-auto mb-4 w-full max-w-md"
-        />
+      <div className="mb-4 p-3 bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="mx-auto mb-1 w-full max-w-[320px]">
+          <Calendar
+            mode="single"
+            fromMonth={startOfMonth(today)}
+            selected={answers.date || undefined}
+            onSelect={(date) => setAnswers({ ...answers, date: date || null })}
+            className="w-full"
+          />
+        </div>
         <div className="flex gap-3 justify-center mt-4">
           <Select onValueChange={(val) => setHour(val)}>
             <SelectTrigger className="w-24 bg-pink-50 border-pink-200 text-pink-700">
@@ -212,7 +213,7 @@ export default function EnchantingDateProposalApp() {
           </Select>
 
           <Select onValueChange={(val) => setMinute(val)}>
-            <SelectTrigger className="w-20 bg-pink-50 border-pink-200 text-pink-700">
+            <SelectTrigger className="w-24 bg-pink-50 border-pink-200 text-pink-700">
               <SelectValue placeholder="Min" />
             </SelectTrigger>
             <SelectContent>
@@ -225,7 +226,7 @@ export default function EnchantingDateProposalApp() {
           </Select>
 
           <Select onValueChange={(val) => setAmpm(val)}>
-            <SelectTrigger className="w-20 bg-pink-50 border-pink-200 text-pink-700">
+            <SelectTrigger className="w-24 bg-pink-50 border-pink-200 text-pink-700">
               <SelectValue placeholder="AM/PM" />
             </SelectTrigger>
             <SelectContent>
@@ -252,7 +253,7 @@ export default function EnchantingDateProposalApp() {
   
     <motion.div key="step2" className="text-center" {...fadeInUp}>
       <StepCard stepNumber={2} totalSteps={5}>
-      <h2 className="text-4xl sm:text-5xl font-playfair font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-rose-500 to-pink-600">
+      <h2 className="text-2xl sm:text-5xl font-playfair font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-rose-500 to-pink-600">
         Chúng mình ăn gì bây giờ nhỉ?
       </h2>
       <div className="grid grid-cols-2 gap-4 md:gap-6 mb-8">
@@ -296,7 +297,7 @@ export default function EnchantingDateProposalApp() {
      
     <motion.div key="step3" className="text-center" {...fadeInUp}>
       <StepCard stepNumber={3} totalSteps={5}>
-      <h2 className="text-3xl font-semibold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-rose-500 to-pink-600">
+      <h2 className="text-2xl font-semibold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-rose-500 to-pink-600">
         Ăn xong rồi mình làm gì nhỉ?
       </h2>
       <div className="grid grid-cols-2 gap-6 mb-6">
@@ -338,7 +339,7 @@ export default function EnchantingDateProposalApp() {
     
     <motion.div key="step4" className="text-center" {...fadeInUp}>
       <StepCard stepNumber={4} totalSteps={5}>
-      <h2 className="text-4xl sm:text-5xl font-playfair font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-rose-500 to-pink-600">
+      <h2 className="text-2xl sm:text-5xl font-playfair font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-rose-500 to-pink-600">
         Mai Huyền mong chờ buổi hẹn này đến mức nào?
       </h2>
       <div className="max-w-lg mx-auto mb-8 p-8 bg-gradient-to-b from-white/80 to-pink-50/60 rounded-2xl shadow-lg border border-pink-100">
@@ -356,7 +357,7 @@ export default function EnchantingDateProposalApp() {
         </div>
       </div>
       <motion.div
-        className="text-4xl font-playfair font-bold text-pink-600 mb-8"
+        className="text-2xl sm:text-4xl font-playfair font-bold text-pink-600 mb-8"
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ type: "spring", stiffness: 260, damping: 20 }}
@@ -378,11 +379,11 @@ export default function EnchantingDateProposalApp() {
      
     <motion.div key="step5" className="text-center" {...fadeInUp}>
       <StepCard stepNumber={5} totalSteps={5}>
-      <h2 className="text-4xl font-playfair font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-pink-600 to-rose-500">
+      <h2 className="text-2xl sm:text-4xl font-playfair font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-pink-600 to-rose-500">
         Đây là buổi hẹn của chúng mình
       </h2>
       <p className="text-lg text-rose-500 mb-3 font-poppins">
-        Anh sẽ qua đón Mai Huyền vào ngày:
+        Anh sẽ qua đón Mai Huyền:
       </p>
       <motion.div
         initial={{ scale: 0.9, opacity: 0 }}
@@ -464,11 +465,11 @@ export default function EnchantingDateProposalApp() {
       />
 
 
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-rose-50 to-purple-100 flex items-center justify-center p-6">
+    <div className="min-h-[100svh] bg-gradient-to-br from-pink-50 via-rose-50 to-purple-100 flex items-center justify-center p-6">
       <Suspense fallback={null}>
         <HeartBackground />
       </Suspense>
-      <div className="relative w-full max-w-3xl">
+      <div className="relative w-full max-w-md sm:max-w-3xl mx-auto px-2">
         <FloatingOrbs />
         <ThemedCard>
           <Sparkles count={18} />

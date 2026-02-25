@@ -17,11 +17,11 @@ export default function InfoModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4 sm:p-0 overflow-x-hidden"
       onClick={onClose}
     >
       <div
-        className="relative bg-white rounded-2xl p-6 max-w-sm w-full text-center animate-scaleIn"
+        className="relative bg-white rounded-2xl p-4 sm:p-6 w-full max-w-[calc(100vw-32px)] sm:max-w-sm text-center animate-scaleIn mx-auto max-h-[calc(100svh-64px)] overflow-auto box-border"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close button */}

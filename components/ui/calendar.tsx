@@ -31,12 +31,12 @@ function Calendar({
         ),
         nav_button_previous: "absolute left-0",
         nav_button_next: "absolute right-0",
-        table: "w-full border-collapse space-y-2",
-        head_row: "flex gap-2",
-        head_cell: "text-pink-600 font-playfair rounded-md w-9 font-semibold text-xs tracking-wide",
-        row: "flex w-full gap-2",
+        table: "w-full border-collapse",
+        head_row: "grid grid-cols-7 gap-0",
+        head_cell: "text-pink-600 font-playfair rounded-md flex items-center justify-center font-semibold text-xs tracking-wide",
+        row: "grid grid-cols-7 gap-0 w-full",
         cell: cn(
-          "relative p-0 text-center text-sm [&:has([aria-selected])]:rounded-xl"
+          "relative p-0 text-center text-sm flex items-center justify-center [&:has([aria-selected])]:rounded-xl"
         ),
         day: cn(
           buttonVariants({ variant: "ghost" }),

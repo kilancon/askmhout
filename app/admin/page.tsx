@@ -66,7 +66,7 @@ export default function AdminPage() {
               <p>Date: {response.data.date ? new Date(response.data.date).toLocaleDateString() : 'Not selected'}</p>
               <p>Time: {response.data.time || 'Not selected'}</p>
               <p>Food Choices: {response.data.food.join(', ') || 'Not selected'}</p>
-              <p>Movie: {response.data.movie || 'Not selected'}</p>
+              <p>Activity: {response.data.movie || 'Not selected'}</p>
               <p>Excitement Level: {response.data.excitement}/100</p>
             </div>
           </div>
