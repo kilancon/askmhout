@@ -193,6 +193,7 @@ export default function EnchantingDateProposalApp() {
           <Calendar
             mode="single"
             fromMonth={startOfMonth(today)}
+            toMonth={endOfMonth(today)}
             selected={answers.date || undefined}
             onSelect={(date) => setAnswers({ ...answers, date: date || null })}
             className="w-full"
